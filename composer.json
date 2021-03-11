@@ -1,0 +1,55 @@
+{
+    "name": "ingenerator/swiftmailer-transport-ses",
+    "description": "AWS SES API transport for SwiftMailer",
+    "type": "library",
+    "homepage": "http://github.com/ingenerator/swiftmailer-transport-ses",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Craig Gosman",
+            "email": "craig@ingenerator.com",
+            "homepage": "https://ingenerator.com"
+        },
+        {
+            "name": "Andrew Coulton",
+            "email": "andrew@ingenerator.com",
+            "homepage": "https://ingenerator.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "aws/aws-sdk-php": "^3.173",
+        "ingenerator/php-utils": "^1.9.0",
+        "psr/log": "^1.1",
+        "swiftmailer/swiftmailer": "^6.2.7"
+    },
+    "require-dev": {
+        "egulias/email-validator": "^3.1",
+        "ingenerator/mailhook": "^1.0",
+        "johnkary/phpunit-speedtrap": "^3.2",
+        "phpunit/phpunit": "^9.4"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://php-packages.ingenerator.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ingenerator\\SwiftMailer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "test\\mock\\Ingenerator\\SwiftMailer\\": "test/mock/",
+            "test\\unit\\Ingenerator\\SwiftMailer\\": "test/unit/"
+        }
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "process-timeout": 600,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
