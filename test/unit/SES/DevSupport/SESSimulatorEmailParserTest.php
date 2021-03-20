@@ -77,15 +77,18 @@ class SESSimulatorEmailParserTest extends TestCase
 
     public function test_parses_message_with_html()
     {
-        $body = '<html><body><h1 class="heading">Hello</h1><p>Here is a test html message</p></body></html>';
-        $msg  = new Swift_Message('Some html', $body);
+        $body = '<html><body><h1 class="heading">Hello</h1><p>Here is a test html message with a <a href="http://example.test">link</a></p></body></html>';
+        $msg  = new Swift_Message('Some html', $body, 'text/html');
         $msg->addTo('some.one@test.com', 'Some One');
+        $msg->addPart('This,is,a,basic,CSV', 'text/csv');
 
         $subject = $this->newSubject();
         $email   = $subject->parseSimulatorCapture(
             ['post' => ['Action' => 'SendRawEmail'], 'raw_data' => $msg->toString()]
         );
-        $this->assertSame($body, $email->getContent());
+        $this->assertSame('some.one@test.com', $email->getTo());
+        $this->assertSame('Some html', $email->getSubject());
+        $this->assertSame(['http://example.test'], $email->getLinks());
     }
 
     protected function newSubject(): SESSimulatorEmailParser
