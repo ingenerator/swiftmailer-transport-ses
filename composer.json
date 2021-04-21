@@ -17,7 +17,7 @@
         }
     ],
     "require": {
-        "php": "^7.4",
+        "php": "^7.4 || ~8.0.0",
         "aws/aws-sdk-php": "^3.173",
         "ingenerator/php-utils": "^1.9.0",
         "psr/log": "^1.1",
