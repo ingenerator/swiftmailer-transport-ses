@@ -1,6 +1,10 @@
 
 ### Unreleased
 
+## v1.0.2 (2021-12-14)
+
+* Increase entropy of unique filename so 2 emails processed in quick succession do not overwrite each other
+
 ## v1.0.1 (2021-04-21)
 
 * Support PHP8

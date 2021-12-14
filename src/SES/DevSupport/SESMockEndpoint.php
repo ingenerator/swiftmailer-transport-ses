@@ -12,7 +12,7 @@ class SESMockEndpoint
             mkdir($dump_dir, 0777, TRUE);
         }
 
-        $base_filename = $dump_dir.'/'.uniqid(date('Y-m-d-H-i-s-u'));
+        $base_filename = $dump_dir.'/'.uniqid(date('Y-m-d-H-i-s-u'), TRUE);
         if (isset($_POST['RawMessage_Data'])) {
             $raw_data = base64_decode($_POST['RawMessage_Data']);
         } else {
