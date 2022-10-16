@@ -2,7 +2,7 @@
     "name": "ingenerator/swiftmailer-transport-ses",
     "description": "AWS SES API transport for SwiftMailer",
     "type": "library",
-    "homepage": "http://github.com/ingenerator/swiftmailer-transport-ses",
+    "homepage": "https://github.com/ingenerator/swiftmailer-transport-ses",
     "license": "BSD-3-Clause",
     "authors": [
         {
@@ -17,8 +17,8 @@
         }
     ],
     "require": {
-        "php": "^7.4 || ~8.0.0",
-        "aws/aws-sdk-php": "^3.173",
+        "php": "~8.0.0 || ~8.1.0",
+        "aws/aws-sdk-php": "^3.238",
         "ingenerator/php-utils": "^1.9.0",
         "psr/log": "^1.1",
         "swiftmailer/swiftmailer": "^6.2.7"
@@ -26,8 +26,8 @@
     "require-dev": {
         "egulias/email-validator": "^3.1",
         "ingenerator/mailhook": "^1.0",
-        "johnkary/phpunit-speedtrap": "^3.2",
-        "phpunit/phpunit": "^9.4"
+        "johnkary/phpunit-speedtrap": "^4.0",
+        "phpunit/phpunit": "^9.5.5"
     },
     "repositories": [
         {
